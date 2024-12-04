@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Store</h1>
+
+        <div class="filter-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+          />
+          <select id="categoryFilter">
+            <option value="All Categories">All Categories</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="jewelery">Jewelry</option>
+            <option value="electronics">Electronics</option>
+          </select>
+          <input type="number" id="minPrice" placeholder="Min Price" />
+          <input type="number" id="maxPrice" placeholder="Max Price" />
+          <select id="sortOptions">
+            <option value="none">Sort By</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+            <option value="name-desc">Name: Z to A</option>
+            <option value="rating-asc">Rating: Low to High</option>
+            <option value="rating-desc">Rating: High to Low</option>
+          </select>
+          <button onclick="applyFilters()">Apply Filters</button>
+        </div>
+      </header>
+
+      <div id="cart">
+        <h3>Shopping Cart</h3>
+        <p>Total Quantity: <span id="cartQuantity">0</span></p>
+        <p>Total Price: $<span id="cartTotal">0.00</span></p>
+        <div id="cartDetails" class="cart-details"></div>
+        <button id="clearCartButton" onclick="clearCart()">Clear Cart</button>
+      </div>
+      <section id="products" class="product-grid"></section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
